@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.getElementById('hamburger');
   const navList = document.getElementById('nav-list');
-  const body = document.getElementsByTagName('body')[0];
+  const body = document.getElementsByTagName('body');
     
-    hamburger.addEventListener('click', (e) => {
+    hamburger.addEventListener('click', function(e) {
       e.stopPropagation(); 
       if (navList.classList.contains('active')) {
         // If the menu is open, close it
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-  body.addEventListener('click', () => {
+  body.addEventListener('click', function() {
     navList.classList.add('active');
     navList.classList.add('desactive');
   });
